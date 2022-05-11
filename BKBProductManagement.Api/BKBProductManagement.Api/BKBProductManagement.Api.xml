@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BKBProductManagement.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BKBProductManagement.Api.Controllers.ProductController.Get">
+            <summary>
+            Retorna todos os produtos
+            </summary>
+            <returns>Lista com objetos contendo informações sobre produtos</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.ProductController.Get(System.Int32)">
+            <summary>
+            Retorna o produto pelo Id
+            </summary>
+            <returns>Objeto contendo informações sobre o produto</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.ProductController.Post(BKBProductManagement.Api.Models.Product)">
+            <summary>
+            Cadastra um produto no banco de dados
+            </summary>
+            <returns>Novo objeto produto cadastrado no banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.ProductController.Edit(BKBProductManagement.Api.Models.Product)">
+            <summary>
+            Edita um produto no banco de dados
+            </summary>
+            <returns>Novo objeto produto editado no banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Remove um produto do banco de dados
+            </summary>
+            <returns>Status de remoção do banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.SupplierController.Get">
+            <summary>
+            Retorna todos os fornecedores
+            </summary>
+            <returns>Lista com objetos contendo informações sobre fornecedores</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.SupplierController.Get(System.Int32)">
+            <summary>
+            Retorna o fornecedor pelo Id
+            </summary>
+            <returns>Objeto contendo informações sobre o fornecedor</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.SupplierController.Post(BKBProductManagement.Api.Models.Supplier)">
+            <summary>
+            Cadastra um fornecedor no banco de dados
+            </summary>
+            <returns>Novo objeto fornecedor cadastrado no banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.SupplierController.Edit(BKBProductManagement.Api.Models.Supplier)">
+            <summary>
+            Edita um fornecedor no banco de dados
+            </summary>
+            <returns>Novo objeto fornecedor editado no banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.SupplierController.Delete(System.Int32)">
+            <summary>
+            Remove um fornecedor do banco de dados
+            </summary>
+            <returns>Status de remoção do banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.UserController.Get">
+            <summary>
+            Retorna todos os usuários
+            </summary>
+            <returns>Lista com objetos contendo informações sobre usuários</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            Retorna o usuário pelo Id
+            </summary>
+            <returns>Objeto contendo informações sobre o usuário</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.UserController.Post(BKBProductManagement.Api.Models.User)">
+            <summary>
+            Cadastra um usuário no banco de dados
+            </summary>
+            <returns>Novo objeto usuário cadastrado no banco de dados</returns>
+        </member>
+        <member name="M:BKBProductManagement.Api.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Remove um usuário do banco de dados
+            </summary>
+            <returns>Status de remoção do banco de dados</returns>
+        </member>
+    </members>
+</doc>

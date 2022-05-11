@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKBProductManagement.Web", "BKBProductManagement\BKBProductManagement.Web.csproj", "{DE756675-CB5D-4E7A-986C-C8DF1B1239F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BKBProductManagement.Api", "..\BKBProductManagement.Api\BKBProductManagement.Api\BKBProductManagement.Api.csproj", "{B19C96EB-DF21-4130-8508-D40AF8D06EFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE756675-CB5D-4E7A-986C-C8DF1B1239F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE756675-CB5D-4E7A-986C-C8DF1B1239F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE756675-CB5D-4E7A-986C-C8DF1B1239F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE756675-CB5D-4E7A-986C-C8DF1B1239F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B19C96EB-DF21-4130-8508-D40AF8D06EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19C96EB-DF21-4130-8508-D40AF8D06EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19C96EB-DF21-4130-8508-D40AF8D06EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19C96EB-DF21-4130-8508-D40AF8D06EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B43EB78-3BF2-46BD-9E24-943EAE1AE8E9}
+	EndGlobalSection
+EndGlobal

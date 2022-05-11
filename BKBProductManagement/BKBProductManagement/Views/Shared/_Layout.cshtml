@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/Content/images/brb_icon_green.svg">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbarContainer">
+            <div class="menuOption">
+                <div class="optionLink"><a href="@Url.Action("Index", "AdminHome", new { area = "Admin" })">Início</a></div>
+            </div>
+            <div>
+                <img src="~/Content/images/brb_icon_green.svg" alt="Cadastrar" style="width: 60px;" />
+            </div>
+            <div class="menuOption">
+                <div class="optionLink menuOptionCircle">
+                    <img src="~/Content/images/edit_action_icon.svg" alt="Cadastrar" style="width: 13px;" />
+                    <div class="navOptionMenuContainer" style="margin-left: -35px">
+                        <div style="height: 10px"></div>
+                        <div class="navOptionMenu navOptionMenuTitle">CADASTRO</div>
+                        <div class="navOptionMenu"><a href="@Url.Action("Index", "NewSupplier", new { area = "Supplier" })">Fornecedor</a></div>
+                        <div class="navOptionMenu"><a href="@Url.Action("Index", "NewProduct", new { area = "Product" })">Produto</a></div>
+                    </div>
+                </div>
+                <div class="optionLink menuOptionCircle">
+                    <img src="~/Content/images/visualize_action_icon.svg" alt="Consultar" style="width: 19px;" />
+                    <div class="navOptionMenuContainer" style="margin-left: -85px">
+                        <div style="height: 10px"></div>
+                        <div class="navOptionMenu navOptionMenuTitle">CONSULTA</div>
+                        <div class="navOptionMenu"><a href="@Url.Action("Index", "Supplier", new { area = "Supplier" })">Fornecedor</a></div>
+                        <div class="navOptionMenu"><a href="@Url.Action("Index", "Product", new { area = "Product" })">Produto</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loggedUserButton">
+                <img src="~/Content/images/user_icon.svg" alt="Usuário" />
+                <div class="navOptionMenuContainer" style="margin-left: -82px">
+                    <div style="height: 10px"></div>
+                    <div class="navOptionMenu navOptionMenuTitle">Bruno B.</div>
+                    <div class="navOptionMenu"><a href="/">Sair</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="masterContainer">
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - BKB PRODUCT MANAGEMENT</p>
+    </footer>
+
+    @*Edit modal*@
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="height: 300px"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="saveModal()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Fim edit modal*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

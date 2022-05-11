@@ -1,0 +1,374 @@
+﻿
+/*Solution layout*/
+    html, body, #masterContainer, .fullHeight {
+        height: 100%;
+    }
+
+    body {
+        padding-bottom: 20px;
+    }
+
+    a:not(.link) {
+        color: black;
+    }
+
+    .areaContainer {
+        margin: 0 10%;
+        padding-top: 65px;
+    }
+
+    .navbar {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbarContainer {
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 5px;
+        border-radius: 25px;
+
+        background-color: white;
+        background: linear-gradient(0deg, rgba(172,243,157,1) 0%, rgba(255,255,255,1) 60%);
+    }
+
+    .navbar .menuOption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+    }
+
+    .navbar .menuOptionCircle {
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 3px;
+        background-color: white;
+    }
+
+    .navbar h4, .navbar h6 {
+        margin: 0;
+    }
+
+    .navbar .optionLink {
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    .navbar .navOptionMenuContainer {
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s linear;
+        margin-top: 5px;
+    }
+
+    .navbar .navOptionMenu {
+        width: 160px;
+        padding: 5px 30px;
+        border: 1px solid #ACF39D;
+        background-color: white;
+    }
+
+    .navbar .navOptionMenuTitle {
+        font-size: smaller;
+        font-weight: 700;
+        padding: 0;
+    }
+
+    .navbar .navOptionMenu:hover {
+        background-color: #EEFCEB;
+    }
+
+    .navbar .optionLink:hover .navOptionMenuContainer, .navbar .loggedUserButton:hover .navOptionMenuContainer {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .loggedUserButton {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 3px solid;
+        right: 30px;
+        border-radius: 50%;
+    }
+
+    .loggedUserButton img { 
+        width: 100%;
+    }
+
+    .loggedUserButton:hover {
+        cursor: pointer;
+    }
+
+    .loggedUserButton .navOptionMenuContainer {
+        margin: 0;
+    }
+
+    .centerOnScreen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        background: linear-gradient(0deg, rgba(172,243,157,1) 0%, rgba(255,255,255,1) 100%);
+    }
+
+    @media (max-width: 1100px) {
+        .notvisible1100 {
+            display: none;
+        }
+
+        .visible1100 {
+            width: 100%;
+        }
+    }
+
+    .page-header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .page-header .col-area {
+        display: inherit;
+        align-items: center;
+    }
+
+    .page-header .header-image {
+        border: 3px solid black;
+        border-radius: 50%;
+        padding: 7px;
+        height: 70px;
+        width: 80px;
+        text-align: center;
+    }
+
+    .page-header img {
+        height: 45px;
+    }
+
+    .page-header span {
+        margin-left: 20px;
+        width: 100%;
+    }
+
+    .page-filters {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        width: 100%;
+    }
+
+    .page-filters input {
+        margin-left: 10px;
+    }
+
+    .crudView {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 500px;
+        justify-content: space-evenly;
+    }
+
+    .crudView input {
+        width: 200px;
+        margin: 10px;
+    }
+
+    .crudView input[type="password"] {
+        margin-top: 30px;
+    }
+
+    .crudView .formSubmitButton {
+        width: 100%; 
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .crudView .formSubmitButton .submit {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 26px;
+        border-radius: 50%;
+        border: 1px solid #ACF39D;
+    }
+
+    .crudView .formSubmitButton .submit:hover {
+        cursor: pointer;
+    }
+
+    .tableAction img {
+        height: 26px;
+    }
+
+    .tableAction:first-child img {
+        height: 20px;
+    }
+/*Fim Solution layout*/
+
+/*Home layout*/
+    .createAccount {
+        position: absolute;
+        color: white;
+        right: 10%;
+        top: 20px;
+        z-index: 10;
+    }
+    .carousel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .carousel .carousel-inner {
+        height: 500px;
+    }
+
+    .carousel .carousel-inner img {
+        margin: auto;
+    }
+
+    .carousel .carousel-inner .carousel-title {
+        height: 100px;
+        max-width: 380px;
+        margin: auto;
+    }
+
+    .carousel .carousel-inner .carousel-title h4 {
+        font-weight: bolder;
+        color: white;
+    }
+
+    #login-area form {
+        display: flex;
+    }
+
+    #firstColumnLogin {
+        background: rgb(255,255,255);
+        background-image: repeating-linear-gradient(135deg,#40d748,#45a338 3%);
+    }
+
+    #secondColumnLogin {
+        background: rgb(255,255,255);
+        background: linear-gradient(126deg, rgba(64,215,72,1) 13%, rgba(92,183,232,1) 43%, rgba(7,80,167,1) 87%);
+    }
+
+    #login-title-area {
+        color: white;
+    }
+
+    .leftAlign {
+        text-align: left;
+        align-items: start;
+        border-bottom-left-radius: 12px;
+    }
+
+    .rightAlign {
+        text-align: right;
+        align-items: end;
+        border-bottom-right-radius: 12px;
+    }
+
+    #homeSubmit {
+        width: 79px;
+        height: 40px;
+        text-align: center;
+        font-size: 26px;
+        border-radius: 50%;
+        border: 1px solid #ACF39D;
+        background-color: white;
+        margin: 0 10px;
+    }
+/*Fim Home layout*/
+
+/*Admin layout*/
+    #adminMasterContainer .menu {
+        margin: 0 5%;
+    }
+
+    #adminMasterContainer .menu, #adminMasterContainer .menuTitle {
+        width: 200px;
+        height: 100px;
+        background-color: #ACF39D;
+    }
+
+    #adminMasterContainer .menuTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    #adminMasterContainer .menuTitle img {
+        position: absolute;
+        bottom: 12px;
+        filter: brightness(0) invert(1);
+    }
+
+    #adminMasterContainer .menu, #adminMasterContainer .menuTitle {
+        border-radius: 12px;
+    }
+
+    #adminMasterContainer .optionMenuContainer {
+        display: flex;
+        flex-direction: column;
+        transition: margin 100ms;
+        margin-top: -70px;
+    }
+
+    #adminMasterContainer .menu:hover .optionMenuContainer {
+        margin-top: -10px;
+    }
+
+    #adminMasterContainer .optionMenu {
+        width: 160px;
+        padding: 5px 30px;
+        border: 1px solid #ACF39D;
+    }
+
+    #adminMasterContainer .optionMenu:hover {
+        background-color: #EEFCEB;
+    }
+
+    #adminMasterContainer .optionMenu.firstOptionMenu {
+        padding-top: 15px;
+    }
+
+    #adminMasterContainer .menuTitle:hover, #adminMasterContainer .optionMenu:hover {
+        cursor: pointer;
+    }
+/*Fim Admin layout*/
+
+/*Product layout*/
+    #productMasterContainer {
+        display: flex;
+        flex-direction: column;
+    }    
+/*Fim Product layout*/

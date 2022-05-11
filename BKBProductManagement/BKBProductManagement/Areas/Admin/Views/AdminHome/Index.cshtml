@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Tela Inicial";
+}
+
+<div class="fullHeight centerOnScreen" id="adminMasterContainer">
+    <div class="menu">
+        <div class="menuTitle">
+            <img src="~/Content/images/edit_action_icon.svg" alt="Cadastrar" style="right: 10px; width: 20px;" />
+            <span>CADASTRO</span>
+        </div>
+        <div class="optionMenuContainer rightAlign">
+            <div class="optionMenu firstOptionMenu"><a href="@Url.Action("Index", "NewSupplier", new { area = "Supplier" })">Fornecedor</a></div>
+            <div class="optionMenu rightAlign"><a href="@Url.Action("Index", "NewProduct", new { area = "Product" })">Produto</a></div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="menuTitle">
+            <span>CONSULTA</span>
+            <img src="~/Content/images/visualize_action_icon.svg" alt="Consultar" style="left: 10px; width: 27px; bottom: 8px;" />
+        </div>
+        <div class="optionMenuContainer leftAlign">
+            <div class="optionMenu firstOptionMenu"><a href="@Url.Action("Index", "Supplier", new { area = "Supplier" })">Fornecedor</a></div>
+            <div class="optionMenu leftAlign"><a href="@Url.Action("Index", "Product", new { area = "Product" })">Produto</a></div>
+        </div>
+    </div>
+</div>

@@ -3,3 +3,8 @@
 ################################################################################
 
 /BKBProductManagement/.vs/BKBProductManagement
+/BKBProductManagement/BKBProductManagement/bin
+/BKBProductManagement/BKBProductManagement/obj/Debug
+/BKBProductManagement.Api/.vs/BKBProductManagement.Api
+/BKBProductManagement.Api/BKBProductManagement.Api/bin/Debug/netcoreapp3.1
+/BKBProductManagement.Api/BKBProductManagement.Api/obj

@@ -1,0 +1,26 @@
+﻿@model BKBProductManagement.Areas.Product.ViewModel.ProductViewModel
+@{
+    Layout = null;
+}
+
+<div class="fullHeight" id="productMasterContainer">
+    <div class="page-header">
+        <div class="col-md-6 col-sm-12 col-area">
+            <div class="header-image">
+                <img src="~/Content/images/edit_icon.svg" alt="Ícone edição" />
+            </div>
+            <span>EDITAR PRODUTO</span>
+        </div>
+    </div>
+    <div class="centerOnScreen">
+        <a class="hidden editModalUrl" href="@Url.Action("Edit", "Product")"></a>
+        <form class="crudView editForm" method="post">
+            @Html.Hidden("id", Model.Product.Id)
+            @Html.Hidden("dater", Model.Product.DateR)
+            <input class="form-control" type="text" name="name" placeholder="Nome" value="@Model.Product.Name" />
+            <input class="form-control" type="text" name="description" placeholder="Descrição" value="@Model.Product.Description" />
+            <input class="form-control" type="text" name="code" placeholder="Código" value="@Model.Product.Code" />
+            <input class="form-control" type="text" name="weight" placeholder="Peso" value="@Model.Product.Weight" />
+        </form>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model BKBProductManagement.Areas.Supplier.ViewModel.NewSupplierViewModel
+@{
+    ViewBag.Title = "Cadastrar Fornecedor";
+}
+
+@section scripts {
+    <script>
+        $(function () {
+            if ("@Model.ViewAction" == "Post") {
+                alert("@Model.ActionMessage");
+            }
+
+            $(".submit").click(function (e) {
+                $("#formNewSupplier").submit();
+            });
+        });
+    </script>
+}
+
+<div class="fullHeight areaContainer" id="supplierMasterContainer">
+    <div class="breadcrumb"><a href="@Url.Action("Index", "AdminHome", new { area = "Admin" })">Início</a> > Fornecedor > @ViewBag.Title</div>
+    <div class="page-header">
+        <div class="col-md-6 col-sm-12 col-area">
+            <div class="header-image">
+                <img src="~/Content/images/edit_icon.svg" alt="Ícone edição" />
+            </div>
+            <span>CADASTRAR FORNECEDOR</span>
+        </div>
+    </div>
+    <div class="centerOnScreen">
+        <form id="formNewSupplier" class="crudView" method="post">
+            <input class="form-control" type="text" name="name" placeholder="Nome" />
+            <input class="form-control" type="text" name="cnpj" placeholder="CNPJ" />
+
+            <div class="formSubmitButton">
+                <div class="submit">
+                    >
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

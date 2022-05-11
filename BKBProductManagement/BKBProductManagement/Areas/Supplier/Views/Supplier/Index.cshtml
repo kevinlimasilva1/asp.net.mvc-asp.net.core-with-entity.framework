@@ -1,0 +1,61 @@
+﻿@model BKBProductManagement.Areas.Supplier.ViewModel.SupplierViewModel
+@{
+    ViewBag.Title = "Visualizar Fornecedores";
+}
+
+@section scripts {
+    @Scripts.Render("~/Scripts/tablecrud.js")
+}
+
+<div class="fullHeight areaContainer" id="supplierMasterContainer">
+    <div class="breadcrumb"><a href="@Url.Action("Index", "AdminHome", new { area = "Admin" })">Início</a> > Fornecedor > @ViewBag.Title</div>
+    <div class="page-header">
+        <div class="col-md-6 col-sm-12 col-area">
+            <div class="header-image">
+                <img src="~/Content/images/visualize_icon.svg" alt="Ícone visualização" />
+            </div>
+            <span>VISUALIZAR FORNECEDORES</span>
+        </div>
+        <div class="col-md-6 col-sm-12 col-area">
+            <div class="page-filters">
+                <div>
+                    <span>Filtros</span>
+                </div>
+                <div style="display: inherit;">
+                    <input class="form-control" type="text" name="name" placeholder="Nome" />
+                    <input class="form-control" type="text" name="name" placeholder="CNPJ" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="centerOnScreen">
+
+        <table class="table" id="systemLogsIndexTable">
+            <thead>
+                <tr>
+                    <th style="width: 2%"></th>
+                    <th style="width: 10%;">Nome</th>
+                    <th style="width: 10%;">CNPJ</th>
+                    <th style="width: 10%;">Data de cadastro</th>
+                    <th style="width: 5%;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var supplier in Model.Suppliers)
+                {
+                    <tr id="3">
+                        <td></td>
+                        <td>@supplier.Name</td>
+                        <td>@supplier.CNPJ</td>
+                        <td>@supplier.DateR</td>
+                        <td>
+                            <a class="tableAction editActionButton" href="@Url.Action("Edit", "Supplier", new { supplierId = supplier.Id })"><img src="~/Content/images/edit_action_icon.svg" alt="Editar" /></a>
+                            <a class="tableAction deleteActionButton" href="@Url.Action("Delete", "Supplier", new { supplierId = supplier.Id })"><img src="~/Content/images/delete_icon.svg" alt="Excluir" /></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model BKBProductManagement.Areas.Supplier.ViewModel.SupplierViewModel
+@{
+    Layout = null;
+}
+
+<div class="fullHeight" id="supplierMasterContainer">
+    <div class="page-header">
+        <div class="col-md-6 col-sm-12 col-area">
+            <div class="header-image">
+                <img src="~/Content/images/edit_icon.svg" alt="Ícone edição" />
+            </div>
+            <span>EDITAR FORNECEDOR</span>
+        </div>
+    </div>
+    <div class="centerOnScreen">
+        <a class="hidden editModalUrl" href="@Url.Action("Edit", "Supplier")"></a>
+        <form class="crudView editForm" method="post">
+            @Html.Hidden("id", Model.Supplier.Id)
+            @Html.Hidden("date", Model.Supplier.Date)
+            <input class="form-control" type="text" name="name" placeholder="Nome" value="@Model.Supplier.Name" />
+            <input class="form-control" type="text" name="cnpj" placeholder="CNPJ" value="@Model.Supplier.CNPJ" />
+            <input class="form-control" type="text" name="dateR" placeholder="Data de Cadastro" value="@Model.Supplier.DateR" />
+        </form>
+    </div>
+</div>

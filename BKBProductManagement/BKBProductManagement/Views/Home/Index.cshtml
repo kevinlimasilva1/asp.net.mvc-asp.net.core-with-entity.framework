@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+@section scripts {
+    <script>
+        $('.carousel').carousel()
+    </script>
+
+    <style>
+        body {
+            padding: 0;
+        }
+
+        .navbar, footer {
+            display: none;
+        }
+    </style>
+}
+
+<div class="fullHeight ">
+    <div class="createAccount">
+        <a href="@Url.Action("CreateAccount", "Home")">CRIAR CONTA</a>
+    </div>
+    <div class="col-md-4 notvisible1100 fullHeight centerOnScreen" id="firstColumnLogin">
+        <div id="loginCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#loginCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#loginCarousel" data-slide-to="1"></li>
+                <li data-target="#loginCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="carousel-title">
+                        <h4>Facilite sua vida financeira com as soluções tecnológicas e inovadoras do BKB PM</h4>
+                    </div>
+                    <img src="~/Content/images/screen-1.gif" style="height: 150px" alt="Solução financeira" />
+                </div>
+
+                <div class="item">
+                    <div class="carousel-title">
+                        <h4>Suas movimentações sempre protegidas com uma chave de segurança</h4>
+                    </div>
+                    <img src="~/Content/images/screen-2.gif" style="height: 300px" alt="Movimentações seguras" />
+                </div>
+
+                <div class="item">
+                    <div class="carousel-title">
+                        <h4>A BKB PM também oferece opções vantajosas para sua empresa, como vale alimentação e refeição!</h4>
+                    </div>
+                    <img src="~/Content/images/screen-3.gif" style="height: 200px" alt="Vale alimentação" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 visible1100 fullHeight centerOnScreen" id="secondColumnLogin">
+        <div>
+            <div id="login-title-area">
+                <img src="~/Content/images/brb_icon_white.svg" alt="Cadastrar" style="width: 200px; margin-bottom: 10px;" />
+            </div>
+            <div id="login-area">
+                <form method="post">
+                    <input class="form-control" type="text" name="login" placeholder="Usuário" style="order: 1" />
+                    <input class="form-control" type="password" name="password" placeholder="Senha" style="order: 3" />
+                    <button id="homeSubmit" style="order: 2">></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

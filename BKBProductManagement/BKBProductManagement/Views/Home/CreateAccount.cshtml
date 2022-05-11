@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Criar Conta";
+}
+
+@section scripts {
+    <style>
+        .navbar .menuOption, .loggedUserButton {
+            display: none;
+        }
+    </style>
+}
+
+<div class="fullHeight areaContainer" id="createAccountContainer">
+    <div class="breadcrumb"><a class="link" href="/">Login</a> > Criar Conta</div>
+    <div class="page-header">
+        <div class="col-md-6 col-sm-12 col-area">
+            <div class="header-image">
+                <img src="~/Content/images/edit_icon.svg" alt="Ícone edição" />
+            </div>
+            <span>CRIAR CONTA</span>
+        </div>
+    </div>
+    <div class="centerOnScreen">
+        <form class="crudView" method="post">
+            <input class="form-control" type="text" name="name" placeholder="Nome" />
+            <input class="form-control" type="text" name="email" placeholder="E-mail" />
+            <input class="form-control" type="text" name="cpf" placeholder="CPF" />
+            <input class="form-control" type="text" name="date" placeholder="Data de Nascimento" />
+            <input class="form-control" type="password" name="pwd" placeholder="Senha" />
+            <input class="form-control" type="password" name="pwd2" placeholder="Confirmação da Senha" />
+
+            <div class="formSubmitButton">
+                <div class="submit">
+                    >
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
